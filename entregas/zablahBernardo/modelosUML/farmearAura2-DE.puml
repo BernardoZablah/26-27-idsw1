@@ -1,0 +1,26 @@
+@startuml
+hide empty description
+
+' Estado inicial (reemplaza a tu muñequito)
+[*] --> NPC
+
+state "NPC" as NPC
+state "Laura" as Laura
+state "Aura Alta" as AuraAlta
+state "Tryhard" as Tryhard
+
+' Transiciones desde NPC
+NPC --> NPC : no hace nada
+NPC --> Laura : farmea sin éxito
+NPC --> AuraAlta : farmea con éxito
+NPC --> Tryhard : intenta demasiado\nfarmear
+
+' Transiciones entre Laura y Aura Alta
+Laura --> AuraAlta : farmea con éxito
+AuraAlta --> Laura : farmea sin éxito
+
+' Transiciones desde Tryhard
+Tryhard --> Laura : farmea sin éxito
+Tryhard --> NPC : farmea con éxito
+
+@enduml
