@@ -1,26 +1,28 @@
 @startuml
 hide empty description
 
-' Estado inicial (reemplaza a tu muñequito)
-[*] --> NPC
+skinparam state {
+  BackgroundColor White
+  BorderColor Black
+  ArrowColor DimGray
+}
+
+[*] -down-> NPC
 
 state "NPC" as NPC
 state "Laura" as Laura
 state "Aura Alta" as AuraAlta
 state "Tryhard" as Tryhard
 
-' Transiciones desde NPC
 NPC --> NPC : no hace nada
-NPC --> Laura : farmea sin éxito
-NPC --> AuraAlta : farmea con éxito
-NPC --> Tryhard : intenta demasiado\nfarmear
+NPC -left-> Laura : farmea sin éxito
+NPC -right-> Tryhard : intenta demasiado\nfarmear
+NPC -down-> AuraAlta : farmea con éxito
 
-' Transiciones entre Laura y Aura Alta
-Laura --> AuraAlta : farmea con éxito
-AuraAlta --> Laura : farmea sin éxito
+Tryhard -left-> Laura : farmea sin éxito
+Tryhard -up-> NPC : farmea con éxito
 
-' Transiciones desde Tryhard
-Tryhard --> Laura : farmea sin éxito
-Tryhard --> NPC : farmea con éxito
+Laura -down-> AuraAlta : farmea con éxito
+AuraAlta -up-> Laura : farmea sin éxito
 
 @enduml
