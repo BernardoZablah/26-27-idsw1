@@ -16,13 +16,17 @@ Laura (Aura Negativa / Pérdida): Resta de Aura causada por un fallo social, tor
 
 ![Diagrama de Estados](../images/farmearAura2-DE.png)
 
+## Diagrama de Estados V3
+
+![Diagrama de Estados](../images/farmearAura3-DE.png)
+
 ## Cosas a mejorar? 
 
 - [x] incorporar el concepto de "Laura" 
 - [ ] hacerlo mas entendible para el cliente
-- [ ] incorporar el estado del Circulo/jueces/valoradores
-- [ ] un estado final
-- [ ] Prime o God Mode
-- [ ] Funado
-- [ ] Demasiado tryhard --> Cringe
+- [x] incorporar el estado del Circulo/jueces/valoradores
+- [x] un estado final
+- [x] Prime o God Mode
+- [x] Funado
+- [x] Demasiado tryhard --> Cringe
 - [ ] iterar
